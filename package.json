@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "description": "",
-  "homepage": "https://github.com/MetaMask/template-snap-monorepo#readme",
+  "homepage": "https://github.com/0xAskar/themiraclesnap.git#readme",
   "bugs": {
-    "url": "https://github.com/MetaMask/template-snap-monorepo/issues"
+    "url": "hhttps://github.com/0xAskar/themiraclesnap.git/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "git+https://github.com/0xAskar/themiraclesnap.git"
   },
   "license": "(MIT-0 OR Apache-2.0)",
   "author": "",
