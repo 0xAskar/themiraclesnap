@@ -10,7 +10,15 @@ export default function BenefitsView({benefits, accounts}: {
       if (benefits === -1) {
         return (
               <Box>
-                <Text>Error fetching benefits</Text>
+                <Text>{`Error fetching benefits: ${JSON.stringify(benefits)}`}</Text>
+              </Box>
+            )
+      }
+
+      else if (benefits === 0) {
+        return (
+              <Box>
+                <Text>{`No benefits found for ${accounts.length} wallet${accounts.length > 1 ? "s" : ""}`}</Text>
               </Box>
             )
       }

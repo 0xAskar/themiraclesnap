@@ -26,6 +26,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
   switch (request.method) {
     case 'findBenefits':
       const benefits = await getBenefits(accounts);
+      console.log(benefits, "benefits");
       return BenefitsViewDialogPopup({benefits, origin, request, accounts});
     default:
       throw new Error('Method not found.');
@@ -38,7 +39,9 @@ export const onHomePage: OnHomePageHandler = async () => {
     "method": "eth_requestAccounts",
     "params": [],
    });
+   console.log("before fetching benefits", accounts);
    const benefits = await getBenefits(accounts);
+   console.log(benefits, "benefits");
   return {
     content: (
       <BenefitsView benefits={benefits} accounts={accounts}/>

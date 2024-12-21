@@ -2,17 +2,6 @@ import { Box, Card, Section, Button, Row, Link } from '@metamask/snaps-sdk/jsx';
 import { Benefit } from '../interfaces/component_interfaces';
 import { benefitSubCategoryMap } from './icons/benefit_sub_data';
 import GasIcon from '../../images/gas.svg';
-import GamingItems from './icons/icons-benefit-sub-cat/GamingItems.svg';
-import ArtDeals from './icons/icons-benefit-sub-cat/ArtDeals.svg';
-import DigitalEvents from './icons/icons-benefit-sub-cat/DigitalEvents.svg';
-import CharityAndFundraising from './icons/icons-benefit-sub-cat/CharityAndFundraising.svg';
-import Experience from './icons/icons-benefit-sub-cat/Experience.svg';
-// import Licensing from './icons/icons-benefit-sub-cat/Licensing.svg';
-import Lifestyle from './icons/icons-benefit-sub-cat/Lifestyle.svg';
-import IRLEvents from './icons/icons-benefit-sub-cat/IRLEvents.svg';
-import Collectibles from './icons/icons-benefit-sub-cat/Collectibles.svg';
-import Networking from './icons/icons-benefit-sub-cat/NetworkingOpportunities.svg';
-import Metaverse from './icons/icons-benefit-sub-cat/Metaverse.svg';
 
 export default function BenefitPreview({ benefit }: { benefit: Benefit }) {
     const getIconForBenefit = (benefitName: string) => {

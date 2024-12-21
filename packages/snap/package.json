@@ -1,6 +1,6 @@
 {
   "name": "themiracle-benefits-tracker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "theMiracle Benefits Tracker integrates their API to showcase a user's benefits, perks, and rewards that pertains to their holdings",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "main": "./dist/bundle.js",
   "files": [
     "dist/",
-    "snap.manifest.json"
+    "snap.manifest.json",
+    "images"
   ],
   "scripts": {
     "allow-scripts": "yarn workspace root allow-scripts",
