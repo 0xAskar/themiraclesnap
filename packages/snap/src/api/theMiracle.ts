@@ -3,7 +3,6 @@ export async function getBenefits(addresses: string[]) {
     try {
         // Initialize combined benefits object
         const allBenefitsByCollection: Record<string, Benefit[]> = {};
-        console.log("fetching benefits for addresses", addresses);
         // Fetch benefits for each address
         for (const address of addresses) {
             const url = `https://www.themiracle.io/api/v1/wallet/${"ethereum"}/${address}/benefits`;
@@ -15,7 +14,7 @@ export async function getBenefits(addresses: string[]) {
             });
             
             if (!response.ok) {
-                console.log("error for address", address, ":", response.status);
+                console.log("Error: ", response.status);
                 continue; // Skip this address if there's an error, but continue with others
             }
 
@@ -37,7 +36,7 @@ export async function getBenefits(addresses: string[]) {
 
         // If no benefits were found for any address, return error code
         if (Object.keys(allBenefitsByCollection).length === 0) {
-            console.log("no benefits found");
+            console.log("No benefits found");
             return 0;
         }
 
