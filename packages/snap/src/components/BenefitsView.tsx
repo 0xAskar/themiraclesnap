@@ -3,10 +3,9 @@ import { Box, Text, Heading } from '@metamask/snaps-sdk/jsx';
 import BenefitPreview from "./BenefitPreview";
 
 export default function BenefitsView({benefits, accounts}: {
-  benefits: Record<string, Benefit[]> | number, 
+  benefits: Benefit[] | number, 
   accounts: string[]
 }) {
-      
       if (benefits === -1) {
         return (
               <Box>
@@ -26,14 +25,19 @@ export default function BenefitsView({benefits, accounts}: {
       return (
             <Box>
               <Heading>{`Your Benefits - ${accounts.length} Wallets`}</Heading>
-              {Object.entries(benefits).map(([collectionName, collectionBenefits]) => (
+              {/* {Object.entries(benefits).map(([collectionName, collectionBenefits]) => (
                 <Box>
                   <Heading>{`${collectionName} - ${collectionBenefits.length} Benefits`}</Heading>
                   {collectionBenefits.map((benefit: Benefit) => (
                     <BenefitPreview benefit={benefit} />
                   ))}
                 </Box>
-              ))}
+              ))} */}
+              <Box>
+                {typeof benefits !== 'number' && benefits.map((benefit: Benefit) => (
+                  <BenefitPreview benefit={benefit} />
+                ))}
+              </Box>
             </Box>
         )
 }

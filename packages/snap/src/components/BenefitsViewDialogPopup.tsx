@@ -4,7 +4,7 @@ import BenefitPreview from "./BenefitPreview";
 import BenefitsView from "./BenefitsView";
 
 export default function BenefitsViewDialogPopup({benefits, origin, request, accounts}: {
-  benefits: Record<string, Benefit[]> | number, 
+  benefits: Benefit[] | number, 
   origin: string, 
   request: any,
   accounts: string[]
